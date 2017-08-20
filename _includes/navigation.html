@@ -6,12 +6,8 @@
 		        {% assign domain = '' %}
 		        {% else %}
 		        {% assign domain = site.url %}
-			{% endif %}
-			{% if link.url == '/blog/' %}
-			<li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-			{% else %}
-			<li><a href="{{ domain }}/blog{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-			{% endif %}
+		    {% endif %}
+		    <li><a href="{{ domain }}/blog{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 		  {% endfor %}
 	    </ul>
 	</nav>
